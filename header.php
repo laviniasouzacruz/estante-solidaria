@@ -194,7 +194,7 @@
       <nav id="header-nav" class="navbar navbar-expand-lg py-3">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <img src="images/main-logo.png" class="logo">
+            <img src="images/logo-principal.png" class="logo" width="250">
           </a>
           <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -205,7 +205,7 @@
           <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
             <div class="offcanvas-header px-4 pb-0">
               <a class="navbar-brand" href="index.html">
-                <img src="images/main-logo.png" class="logo">
+                <img src="images/logo-principal.png" class="logo">
               </a>
               <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
                 data-bs-target="#bdNavbar"></button>
@@ -255,138 +255,96 @@
               </ul>
               <div class="user-items d-flex">
                 <ul class="d-flex justify-content-end list-unstyled mb-0">
-                  <li class="search-item pe-3">
-                    <a href="#" class="search-button">
-                      <svg class="search">
-                        <use xlink:href="#search"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="pe-3">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      <svg class="user">
-                        <use xlink:href="#user"></use>
-                      </svg>
-                    </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header border-bottom-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="tabs-listing">
-                              <nav>
-                                <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-                                  <button class="nav-link text-capitalize active" id="nav-sign-in-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in"
-                                    aria-selected="true">Entrar</button>
-                                  <button class="nav-link text-capitalize" id="nav-register-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register"
-                                    aria-selected="false">Cadastre-se</button>
+                    <li class="search-item pe-3">
+                        <a href="#" class="search-button">
+                        <svg class="search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                        </a>
+                    </li>
+                    <li class="pe-3">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <svg class="user">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header border-bottom-0">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                              </nav>
+                                <div class="modal-body">
+                                    <div class="tabs-listing">
+                                        <nav>
+                                            <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+                                            <button class="nav-link text-capitalize active" id="nav-sign-in-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in"
+                                                aria-selected="true">Entrar</button>
+                                            </div>
+                                        </nav>
 
-                              <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel" 
-                                aria-labelledby="nav-sign-in-tab">
-                                    <div class="form-group py-3">
-                                        <label class="mb-2" for="sign-in">Usuário ou E-mail:</label>
-                                        <input type="text" minlength="2" name="usuario" placeholder="Usuário" 
-                                        class="form-control w-100 rounded-3 p-3" required>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel" 
+                                                aria-labelledby="nav-sign-in-tab">
+                                                    <div class="form-group py-3">
+                                                        <label class="mb-2" for="sign-in">Usuário ou E-mail:</label>
+                                                        <input type="text" minlength="2" name="usuario" placeholder="Usuário" 
+                                                        class="form-control w-100 rounded-3 p-3" required>
+                                                    </div>
+                                                    <div class="form-group pb-3">
+                                                        <label class="mb-2" for="sign-in">Digite sua senha:</label>
+                                                        <input type="password" minlength="2" name="senha" placeholder="Senha" 
+                                                        class="form-control w-100 rounded-3 p-3" required>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end align-items-center py-3">
+                                                        <a href="formUsuario.php" class="fw-bold">Cadastre-se</a>
+                                                    </div>
+                                                    <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Avançar</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group pb-3">
-                                        <label class="mb-2" for="sign-in">Digite sua senha:</label>
-                                        <input type="password" minlength="2" name="senha" placeholder="Senha" 
-                                        class="form-control w-100 rounded-3 p-3" required>
-                                    </div>
-                                    <div class="d-flex justify-content-between py-3">
-                                        <label class="mb-0">
-                                            <input type="checkbox" class="d-inline">
-                                            <span class="label-body">Salvar senha</span>
-                                        </label>
-                                        <label class="mb-0">
-                                            <a href="#" class="fw-bold">Esqueceu sua senha?</a>
-                                        </label>
-                                    </div>
-                                    <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Avançar</button>
                                 </div>
-
-                                <div class="tab-pane fade" id="nav-register" role="tabpanel"
-                                  aria-labelledby="nav-register-tab">
-                                  <div class="form-group py-3">
-                                    <label class="mb-2" for="register">Digite seu e-mail:</label>
-                                    <input type="text" minlength="2" name="usuario" placeholder="E-mail"
-                                      class="form-control w-100 rounded-3 p-3" required>
-                                  </div>
-                                  <div class="form-group pb-3">
-                                    <label class="mb-2" for="sign-in">Crie uma senha:</label>
-                                    <input type="password" minlength="2" name="password" placeholder="Senha"
-                                      class="form-control w-100 rounded-3 p-3" required>
-                                  </div>
-                                  <label class="py-3">
-                                    <input type="checkbox" required="" class="d-inline">
-                                    <span class="label-body">Concordo com a <a href="#" class="fw-bold">Política de Privacidade</a></span>
-                                  </label>
-                                  <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Cadastrar</button>
-                                </div>
-                              </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
-                    </div>
                   </li>
 
-                  <li class="cart-dropdown dropdown">
-                    <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown" role="button"
-                      aria-expanded="false">
-                      <svg class="cart">
-                        <use xlink:href="#cart"></use>
-                      </svg><span class="fs-6 fw-light">(0)</span>
-                    </a>
-                    <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
-                      <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-primary">Your cart</span>
-                        <span class="badge bg-primary rounded-pill">2</span>
-                      </h4>
-                      <ul class="list-group mb-3">
-                        <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                          <div>
-                            <h5>
-                              <a href="index.html">Secrets of the Alchemist</a>
-                            </h5>
-                            <small>High quality in good price.</small>
-                          </div>
-                          <span class="text-primary">$870</span>
-                        </li>
-                        <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                          <div>
-                            <h5>
-                              <a href="index.html">Quest for the Lost City</a>
-                            </h5>
-                            <small>Professional Quest for the Lost City.</small>
-                          </div>
-                          <span class="text-primary">$600</span>
-                        </li>
-                        <li class="list-group-item bg-transparent d-flex justify-content-between">
-                          <span class="text-capitalize"><b>Total (USD)</b></span>
-                          <strong>$1470</strong>
-                        </li>
-                      </ul>
-                      <div class="d-flex flex-wrap justify-content-center">
-                        <a href="index.html" class="w-100 btn btn-dark mb-1" type="submit">View Cart</a>
-                        <a href="index.html" class="w-100 btn btn-primary" type="submit">Go to checkout</a>
-                      </div>
-                    </div>
-                  </li>
+                    <li class="favoritos-dropdown dropdown pe-3">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                        <svg class="favoritos">
+                            <use xlink:href="#heart"></use>
+                        </svg>
+                        </a>
+                        <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-primary">Favoritos</span>
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h5><a href="index.html">Manual de Assassinato para Boas Garotas</a></h5>
+                                    <small>Holly Jackson</small>
+                                    <a href="#" class="d-block fw-medium text-capitalize mt-2">Reservar</a>
+                                </div>
+                                <span class="text-primary">Disponível</span>
+                            </li>
+                            <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h5><a href="index.html">A Hipótese do Amor</a></h5>
+                                    <small>Ali Hazelwood</small>
+                                    <a href="#" class="d-block fw-medium text-capitalize mt-2">Reservar</a>
+                                </div>
+                                <span class="text-primary">Reservado</span>
+                            </li>
+                    </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </nav>
-
     </header>
