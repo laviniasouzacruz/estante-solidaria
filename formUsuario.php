@@ -1,73 +1,211 @@
 <?php include "header.php" ?>
 
+
 <div class="container py-5">
+
     <div class="row justify-content-center">
+
         <div class="col-lg-6 col-md-8">
 
-            <h2 class="text-center mb-4">Cadastre-se</h2>
 
-            <form action="actionUsuario.php" method="POST" enctype="multipart/form-data">
+            <div class="d-flex justify-content-center mb-4">
 
-                <div class="form-group py-2">
-                    <label class="mb-2" for="nomeUsuario">Nome Completo:</label>
-                    <input type="text" name="nomeUsuario" id="nomeUsuario"
-                        placeholder="Digite seu nome completo"
-                        class="form-control w-100 rounded-3 p-3" required>
+                <h2 style="font-size: 30px;">
+                    Cadastre-se:
+                </h2>
+
+            </div>
+
+
+            <form action="actionUsuario.php" method="POST" class="was-validated">
+
+
+                <div class="form-floating mt-3 mb-3">
+
+                    <input 
+                    type="text" 
+                    name="nomeUsuario" 
+                    id="nomeUsuario"
+                    placeholder="Nome Completo"
+                    class="form-control"
+                    required>
+
+                    <label for="nomeUsuario">
+                        Nome Completo
+                    </label>
+
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+
                 </div>
 
-                <div class="form-group py-2">
-                    <label class="mb-2" for="matriculaUsuario">Número de Matrícula:</label>
-                    <input type="text" name="nomeUsuario" id="nomeUsuario"
-                        placeholder="Digite seu número de matrícula"
-                        class="form-control w-100 rounded-3 p-3" required>
+
+
+                <div class="form-floating mt-3 mb-3">
+
+                    <input 
+                    type="text" 
+                    name="matriculaUsuario" 
+                    id="matriculaUsuario"
+                    placeholder="Número de Matrícula"
+                    class="form-control"
+                    required>
+
+                    <label for="matriculaUsuario">
+                        Número de Matrícula
+                    </label>
+
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+
                 </div>
 
-                <div class="form-group py-2">
-                    <label class="mb-2" for="dataNascimentoUsuario">Data de Nascimento:</label>
-                    <input type="date" name="dataNascimentoUsuario" id="dataNascimentoUsuario"
-                        class="form-control w-100 rounded-3 p-3" required>
+
+
+                <div class="form-floating mt-3 mb-3">
+
+                    <input 
+                    type="date" 
+                    name="dataNascimentoUsuario" 
+                    id="dataNascimentoUsuario"
+                    class="form-control"
+                    required>
+
+                    <label for="dataNascimentoUsuario">
+                        Data de Nascimento
+                    </label>
+
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+
                 </div>
 
-                <div class="form-group py-2">
-                    <label class="mb-2" for="emailUsuario">E-mail:</label>
-                    <input type="email" name="emailUsuario" id="emailUsuario"
-                        placeholder="Digite seu e-mail"
-                        class="form-control w-100 rounded-3 p-3" required>
+
+
+                <div class="form-floating mt-3 mb-3">
+
+                    <input 
+                    type="email" 
+                    name="emailUsuario" 
+                    id="emailUsuario"
+                    placeholder="Email"
+                    class="form-control"
+                    required>
+
+                    <label for="emailUsuario">
+                        Email
+                    </label>
+
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+
                 </div>
 
-                <div class="form-group py-2">
-                    <label class="mb-2" for="senhaUsuario">Senha:</label>
-                    <input type="password" name="senhaUsuario" id="senhaUsuario"
-                        placeholder="Crie uma senha"
-                        class="form-control w-100 rounded-3 p-3"
-                        minlength="3" maxlength="8" required>
+
+
+                <div class="form-floating mt-3 mb-3">
+
+                    <input 
+                    type="password" 
+                    name="senhaUsuario" 
+                    id="senhaUsuario"
+                    placeholder="Senha"
+                    class="form-control"
+                    minlength="3"
+                    maxlength="8"
+                    required>
+
+                    <label for="senhaUsuario">
+                        Senha
+                    </label>
+
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+
                 </div>
 
-                <div class="form-group py-2">
-                    <label class="mb-2" for="confirmarSenhaUsuario">Confirmar Senha:</label>
-                    <input type="password" name="confirmarSenhaUsuario" id="confirmarSenhaUsuario"
-                        placeholder="Confirme sua senha"
-                        class="form-control w-100 rounded-3 p-3"
-                        minlength="3" maxlength="8" required>
+
+
+                <div class="form-floating mt-3 mb-3">
+
+                    <input 
+                    type="password" 
+                    name="confirmarSenhaUsuario" 
+                    id="confirmarSenhaUsuario"
+                    placeholder="Confirmar Senha"
+                    class="form-control"
+                    minlength="3"
+                    maxlength="8"
+                    required>
+
+                    <label for="confirmarSenhaUsuario">
+                        Confirmar Senha
+                    </label>
+
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+
                 </div>
+
+
+
 
                 <div class="py-3">
+
                     <label>
-                        <input type="checkbox" required class="d-inline">
+
+                        <input 
+                        type="checkbox" 
+                        required 
+                        class="d-inline">
+
                         <span class="label-body">
-                            Concordo com a <a href="#" class="fw-bold">Política de Privacidade</a>
+
+                            Concordo com a 
+                            <a href="#" class="fw-bold">
+                                Política de Privacidade
+                            </a>
+
                         </span>
+
                     </label>
+
                 </div>
 
-                <button type="submit" class="btn btn-dark w-100 my-3">
+
+
+
+                <button 
+                type="submit" 
+                class="btn btn-primary w-100 my-3">
+
                     Cadastrar
+
                 </button>
+
+
 
             </form>
 
+
+
+            <div class="text-center mt-3">
+
+                <p>
+                    Já possui uma conta?
+                    <a href="formLogin.php" class="fw-bold">
+                        Faça login!
+                    </a>
+                </p>
+
+            </div>
+
+
         </div>
+
     </div>
+
 </div>
+
 
 <?php include "footer.php" ?>

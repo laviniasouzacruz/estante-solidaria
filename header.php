@@ -253,6 +253,7 @@
                   <a class="nav-link me-4" href="index.html">Contato</a>
                 </li>
               </ul>
+            <ul> 
               <div class="user-items d-flex">
                 <ul class="d-flex justify-content-end list-unstyled mb-0">
                     <li class="search-item pe-3">
@@ -263,84 +264,174 @@
                         </a>
                     </li>
                     <li class="pe-3">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <svg class="user">
-                            <use xlink:href="#user"></use>
-                        </svg>
+                        <a href="formLogin.php">
+                            <svg class="user">
+                                <use xlink:href="#user"></use>
+                            </svg>
                         </a>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header border-bottom-0">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="tabs-listing">
-                                        <nav>
-                                            <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-                                            <button class="nav-link text-capitalize active" id="nav-sign-in-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in"
-                                                aria-selected="true">Entrar</button>
-                                            </div>
-                                        </nav>
+                    </li>
+                    <li>
 
-                                        <div class="tab-content" id="nav-tabContent">
-                                            <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel" 
-                                                aria-labelledby="nav-sign-in-tab">
-                                                    <div class="form-group py-3">
-                                                        <label class="mb-2" for="sign-in">Usuário ou E-mail:</label>
-                                                        <input type="text" minlength="2" name="usuario" placeholder="Usuário" 
-                                                        class="form-control w-100 rounded-3 p-3" required>
-                                                    </div>
-                                                    <div class="form-group pb-3">
-                                                        <label class="mb-2" for="sign-in">Digite sua senha:</label>
-                                                        <input type="password" minlength="2" name="senha" placeholder="Senha" 
-                                                        class="form-control w-100 rounded-3 p-3" required>
-                                                    </div>
-                                                    <div class="d-flex justify-content-end align-items-center py-3">
-                                                        <a href="formUsuario.php" class="fw-bold">Cadastre-se</a>
-                                                    </div>
-                                                    <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Avançar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+
+                          <div class="modal-dialog">
+
+                              <div class="modal-content">
+
+                                  <div class="modal-header border-bottom-0">
+
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                  </div>
+
+
+                                  <div class="modal-body">
+
+                                      <div class="tabs-listing">
+
+                                          <nav>
+
+                                              <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+                                                  <button class="nav-link text-capitalize active" 
+                                                  id="nav-sign-in-tab" 
+                                                  data-bs-toggle="tab"
+                                                  data-bs-target="#nav-sign-in" 
+                                                  type="button" 
+                                                  role="tab"
+                                                  aria-controls="nav-sign-in"
+                                                  aria-selected="true">
+
+                                                      Entrar
+
+                                                  </button>
+
+                                              </div>
+
+                                          </nav>
+
+
+                                          <div class="tab-content" id="nav-tabContent">
+
+
+                                              <div class="tab-pane fade active show" 
+                                              id="nav-sign-in" 
+                                              role="tabpanel"
+                                              aria-labelledby="nav-sign-in-tab">
+
+
+                                                  <form action="actionLogin.php" method="POST">
+
+
+                                                      <div class="form-group py-3">
+
+                                                          <label class="mb-2" for="emailUsuario">
+                                                              Usuário ou E-mail:
+                                                          </label>
+
+                                                          <input 
+                                                          type="email" 
+                                                          name="emailUsuario" 
+                                                          id="emailUsuario"
+                                                          placeholder="Digite seu e-mail"
+                                                          class="form-control w-100 rounded-3 p-3"
+                                                          required>
+
+                                                      </div>
+
+
+
+                                                      <div class="form-group pb-3">
+
+                                                          <label class="mb-2" for="senhaUsuario">
+                                                              Digite sua senha:
+                                                          </label>
+
+                                                          <input 
+                                                          type="password" 
+                                                          name="senhaUsuario" 
+                                                          id="senhaUsuario"
+                                                          placeholder="Senha"
+                                                          class="form-control w-100 rounded-3 p-3"
+                                                          minlength="3"
+                                                          maxlength="8"
+                                                          required>
+
+                                                      </div>
+
+
+
+                                                      <div class="d-flex justify-content-end align-items-center py-3">
+
+                                                          <a href="formUsuario.php" class="fw-bold">
+                                                              Cadastre-se
+                                                          </a>
+
+                                                      </div>
+
+
+
+                                                      <button type="submit" class="btn btn-dark w-100 my-3">
+                                                          Avançar
+                                                      </button>
+
+
+                                                  </form>
+
+
+                                              </div>
+
+
+                                          </div>
+
+
+                                      </div>
+
+
+                                  </div>
+
+
+                              </div>
+
+                          </div>
+
+                      </div>
                   </li>
 
-                    <li class="favoritos-dropdown dropdown pe-3">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                        <svg class="favoritos">
-                            <use xlink:href="#heart"></use>
-                        </svg>
-                        </a>
-                        <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
-                        <h4 class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="text-primary">Favoritos</span>
-                            <span class="badge bg-primary rounded-pill">2</span>
-                        </h4>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h5><a href="index.html">Manual de Assassinato para Boas Garotas</a></h5>
-                                    <small>Holly Jackson</small>
-                                    <a href="#" class="d-block fw-medium text-capitalize mt-2">Reservar</a>
-                                </div>
-                                <span class="text-primary">Disponível</span>
-                            </li>
-                            <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h5><a href="index.html">A Hipótese do Amor</a></h5>
-                                    <small>Ali Hazelwood</small>
-                                    <a href="#" class="d-block fw-medium text-capitalize mt-2">Reservar</a>
-                                </div>
-                                <span class="text-primary">Reservado</span>
-                            </li>
-                    </li>
+                </ul>
+                <ul>
+                  <li class="favoritos-dropdown dropdown pe-3">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                    <svg class="favoritos">
+                        <use xlink:href="#heart"></use>
+                    </svg>
+                    </a>
+                    <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-primary">Favoritos</span>
+                        <span class="badge bg-primary rounded-pill">2</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                      <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
+                        <div>
+                            <h5><a href="index.html">Manual de Assassinato para Boas Garotas</a></h5>
+                            <small>Holly Jackson</small>
+                            <a href="#" class="d-block fw-medium text-capitalize mt-2">Reservar</a>
+                        </div>
+                        <span class="text-primary">Disponível</span>
+                      </li>
+                      <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
+                        <div>
+                            <h5><a href="index.html">A Hipótese do Amor</a></h5>
+                            <small>Ali Hazelwood</small>
+                            <a href="#" class="d-block fw-medium text-capitalize mt-2">Reservar</a>
+                        </div>
+                        <span class="text-primary">Reservado</span>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -348,3 +439,5 @@
         </div>
       </nav>
     </header>
+  </body>
+</html>
