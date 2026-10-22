@@ -42,7 +42,7 @@ Clone o repositório utilizando o comando:
 git clone https://github.com/laviniasouzacruz/estante-solidaria.git
 ```
 
-Se preferir, acesse o repositório no GitHub e utilize a opção **Code → Download ZIP**.
+Se preferir, acesse o repositório no GitHub e selecione **Code → Download ZIP**.
 
 ### 2. Configurar a pasta do projeto
 
@@ -54,37 +54,61 @@ Exemplo no Windows:
 C:\xampp\htdocs\estante-solidaria
 ```
 
-### 3. Iniciar o XAMPP
+### 3. Iniciar os serviços do XAMPP
 
-Abra o painel de controle do XAMPP e inicie os serviços **Apache** e **MySQL**.
+Abra o painel de controle do XAMPP e inicie os serviços:
 
-### 4. Importar o banco de dados
+- Apache
+- MySQL
 
-1. Abra o navegador e acesse http://localhost/phpmyadmin.
-2. Crie o banco de dados com o nome esperado pela aplicação, caso ele ainda não exista.
-3. Selecione o banco de dados.
-4. Clique na opção **Importar**.
-5. Selecione o arquivo SQL disponibilizado no repositório. O nome informado é `estante_solidaria.sql`; confira a grafia exata no GitHub.
-6. Execute a importação e verifique se as tabelas foram criadas corretamente.
+### 4. Criar o banco de dados
 
-### 5. Configurar a conexão com o banco de dados
+1. Acesse o phpMyAdmin pelo endereço http://localhost/phpmyadmin.
+2. Clique em **Novo** para criar um banco de dados.
+3. Informe exatamente o seguinte nome:
 
-Localize o arquivo PHP responsável pela conexão com o banco de dados e confira as configurações necessárias:
+   `estante_solidaria`
 
-- Nome do banco de dados.
-- Usuário do MySQL.
-- Senha, se aplicável.
-- Endereço do servidor.
+4. Confirme a criação do banco de dados.
 
-As configurações devem corresponder ao ambiente local utilizado.
+**Importante:** utilize esse nome para manter a compatibilidade com as configurações de conexão utilizadas pelo projeto. Caso escolha outro nome, será necessário atualizar as configurações correspondentes no código PHP.
 
-### 6. Acessar a aplicação
+### 5. Importar o banco de dados
 
-Com o Apache e o MySQL em execução e o banco de dados configurado, acesse:
+Depois de criar o banco `estante_solidaria`:
+
+1. Selecione o banco de dados no phpMyAdmin.
+2. Acesse a opção **Importar**.
+3. Selecione o arquivo SQL disponibilizado no repositório GitHub, identificado como `estante_solidaria.sql`.
+4. Execute a importação.
+5. Verifique se as tabelas foram criadas corretamente.
+
+O arquivo SQL contém a estrutura e os dados incluídos no script disponibilizado para a configuração inicial do banco de dados.
+
+### 6. Conferir as configurações de conexão
+
+Localize o arquivo PHP responsável pela conexão com o banco de dados e confira se as configurações correspondem ao seu ambiente local.
+
+Verifique especialmente:
+
+- **Servidor (host):** normalmente `localhost` no ambiente local do XAMPP.
+- **Banco de dados:** `estante_solidaria`.
+- **Usuário do MySQL:** confira o usuário configurado no seu ambiente.
+- **Senha do MySQL:** confira a senha definida para esse usuário.
+
+Em instalações padrão do XAMPP, o usuário `root` pode estar configurado sem senha. Entretanto, isso depende da configuração da instalação utilizada.
+
+Se o servidor, o usuário ou a senha forem diferentes dos valores definidos no código, ajuste as configurações no arquivo PHP responsável pela conexão.
+
+**Atenção:** manter o nome do banco de dados igual ao utilizado pela aplicação evita alterações desnecessárias no código. Se o nome for alterado, confira todas as configurações e referências ao banco que dependam desse nome.
+
+### 7. Acessar a aplicação
+
+Com o Apache e o MySQL em execução e o banco de dados configurado, abra o navegador e acesse:
 
 http://localhost/estante-solidaria/
 
-Caso a pasta do projeto tenha outro nome dentro de `htdocs`, ajuste o endereço conforme necessário.
+Se você utilizou outro nome para a pasta dentro de `htdocs`, ajuste o endereço conforme necessário.
 
 ## Template utilizado
 
@@ -92,7 +116,7 @@ O projeto utilizou como base visual o template **Bookly – Tailwind CSS**, disp
 
 Link do template: https://templatesjungle.com/downloads/bookly-tailwind/
 
-O template serviu como referência para a interface visual da aplicação, adaptada à proposta da Estante Solidária.
+O template serviu como referência para a interface visual, adaptada à proposta da Estante Solidária.
 
 ## Contexto acadêmico
 
@@ -115,4 +139,3 @@ A Estante Solidária representa a aplicação prática de conhecimentos de desen
 ## Finalidade
 
 Este projeto foi desenvolvido para fins acadêmicos, com o propósito de aplicar conhecimentos técnicos, explorar soluções web e incentivar a solidariedade, o acesso à leitura e o reaproveitamento de livros no ambiente educacional.
-
